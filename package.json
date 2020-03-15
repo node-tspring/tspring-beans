@@ -1,0 +1,26 @@
+{
+  "name": "@tspring/beans",
+  "version": "0.1.6",
+  "description": "@tspring/beans",
+  "main": "dist/index.js",
+  "types": "src/index.ts",
+  "scripts": {
+    "test": "jest",
+    "build": "tsc -p tsconfig.prod.json",
+    "watch": "rm -rf dist && tsc -w -p tsconfig.prod.json",
+    "prepublish": "rm -rf dist && npm run build && npm t"
+  },
+  "files": ["src", "dist", "tsconfig.base.json", "tsconfig.prod.json"],
+  "author": "vaniship@gmail.com",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/jest": "^25.1.4",
+    "@types/node": "^13.7.0",
+    "jest": "^25.1.0",
+    "ts-jest": "^25.2.1",
+    "typescript": "^3.8.3"
+  },
+  "dependencies": {
+    "@tspring/core": "^0.1.6"
+  }
+}
